@@ -1,0 +1,256 @@
+/* FileUpload.css */
+
+/* Centrar el contenedor principal */
+.file-upload-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+  background-color: #f9fafb; /* Opcional: un color de fondo suave */
+  box-sizing: border-box;
+}
+
+/* Estilos para el card interno */
+.file-upload-card {
+  width: 100%;
+  max-width: 800px; /* Ajusta según tus necesidades */
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: sombra para el card */
+  box-sizing: border-box;
+}
+
+/* Título centrado */
+.file-upload-card h1 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* Botón "Ver solicitudes" centrado */
+.file-upload-card .view-requests-button {
+  display: block;
+  margin: 0 auto 16px auto; /* Centra el botón y añade margen inferior */
+  background-color: #3182ce; /* Azul */
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.file-upload-card .view-requests-button:hover {
+  background-color: #2b6cb0;
+}
+
+/* Estilos para la zona de drop */
+.dropzone {
+  border: 2px dashed #cbd5e0;
+  border-radius: 8px;
+  padding: 40px;
+  text-align: center;
+  transition: border-color 0.3s, background-color 0.3s;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.dropzone-active {
+  border-color: #3182ce;
+  background-color: #ebf8ff;
+}
+
+/* Icono y texto dentro de la dropzone */
+.dropzone .lucide-react {
+  display: block;
+  margin: 0 auto 16px auto;
+  color: #cbd5e0;
+}
+
+.dropzone p {
+  font-size: 1.2em;
+  color: #555555;
+  margin: 0;
+}
+
+/* Estilos para la lista de archivos cargados */
+.uploaded-files-list {
+  margin-top: 24px;
+}
+
+.uploaded-files-list h2 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.uploaded-files-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.uploaded-file-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  background-color: #f7fafc;
+}
+
+.uploaded-file-item:last-child {
+  margin-bottom: 0;
+}
+
+.uploaded-file-item .file-info {
+  display: flex;
+  align-items: center;
+}
+
+.uploaded-file-item .file-info .lucide-react {
+  margin-right: 12px;
+  color: #3182ce;
+}
+
+.uploaded-file-item .file-name {
+  font-size: 1em;
+  color: #333333;
+}
+
+/* Botón de eliminar archivo */
+.remove-button {
+  background-color: transparent;
+  border: none;
+  color: #e53e3e; /* Rojo */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.remove-button .lucide-react {
+  margin-right: 4px;
+}
+
+/* Estilos para el modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo opaco */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Evitar que los clics dentro del modal cierren el modal */
+.modal-content * {
+  cursor: default;
+}
+
+/* Título del modal */
+.modal-content h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Formulario de búsqueda centrado */
+.search-form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px 0 0 4px;
+  font-size: 1em;
+  outline: none;
+}
+
+.search-form button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #3182ce; /* Azul */
+  color: #ffffff;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-form button:hover {
+  background-color: #2b6cb0;
+}
+
+/* Estilos para la tabla */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.requests-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.requests-table th,
+.requests-table td {
+  border: 1px solid #e2e8f0;
+  padding: 12px 16px;
+  text-align: center;
+}
+
+.requests-table th {
+  background-color: #f7fafc;
+  font-weight: bold;
+}
+
+.requests-table tbody tr:nth-child(even) {
+  background-color: #f1f5f9;
+}
+
+/* Botón "Cerrar" del modal centrado */
+.close-modal-button {
+  margin-top: 24px;
+  padding: 10px 20px;
+  background-color: #e53e3e; /* Rojo */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.close-modal-button:hover {
+  background-color: #c53030;
+}
+
+/* Evitar scroll en el fondo cuando el modal está abierto */
+body.modal-open {
+  overflow: hidden;
+}

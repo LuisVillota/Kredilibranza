@@ -1,0 +1,193 @@
+/*--------------------------- Estilos de la sección registros ---------------------------*/
+#registro {
+    padding: 2rem;
+    background-color: #ffffff;
+    text-align: center;
+    max-width: 1200px; /* Ancho máximo */
+    margin: 0 auto; /* Centrar horizontalmente */
+    margin-top: 6%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Cambiado a space-between */
+    align-items: center;
+    z-index: 0;
+}
+
+.left {
+    flex: 1.2;
+    text-align: left;
+    position: relative;
+}
+
+#Pensionado {
+    width: 100%; /* Asegurar que la imagen ocupe todo el espacio disponible */
+    border-radius: 3.6%;
+    position: absolute; /* Posición absoluta para superponer */
+    z-index: 1; /* Asegura que esté detrás de #Clientes */
+}
+
+#Banner {
+    top: 0; /* Alineación superior */
+    margin-left: 23%; /* Alineación izquierda */
+    width: 100%; /* Mismo ancho que #Pensionado */
+    height: 100%; /* Mismo alto que #Pensionado */
+    z-index: 0; /* Asegura que esté detrás de #Pensionado */
+    position: unset;
+}
+
+.card2 {
+    font-size: 125%;
+    position: absolute; /* Posición absoluta para superponer */
+    top: 70%; /* Ajusta según sea necesario */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* Asegura que esté encima de #Pensionado */
+    color: white; /* Color del texto */
+    background-color: rgba(10, 115, 185, 0.64); /* Fondo semitransparente */
+    padding: 1rem;
+    border-radius: 15px;
+    text-align: center;
+    height: auto;
+    width: 75%;
+}
+
+.right {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 40px;
+    background-color: rgba(10, 115, 185, 0.64); /* Fondo semitransparente */
+    padding: 5%;
+    height: auto; /* Ajustado */
+    width: 80%; /* Ajustado */
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos dentro de la card */
+.card * {
+    font-size: 100%;
+}
+
+.card input[type="text"],
+.card input[type="date"],
+.card select {
+    width: calc(100% - 20px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.logo_registro {
+    width: 50%;
+    height: 50%;
+    margin-bottom: 5%;
+}
+
+#txtForm {
+    color: white;
+    margin-bottom: 2%;
+}
+
+.card button[type="submit"] {
+    width: 100%;
+    background-color: #ed5621;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+}
+
+.card button[type="submit"]:hover {
+    background-color: #ff7b00;
+}
+
+/* Estilos para el checkbox */
+.checkbox-input {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 2px solid #ff7b00;
+    margin-right: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.checkbox-input:checked::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 12px;
+    height: 12px;
+    background-color: #ff7b00;
+}
+
+#registro img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 3.6%;
+    min-width: 200px;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 1rem;
+    }
+
+    #registro {
+        padding: 2rem;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left, .right {
+        flex: auto;
+        padding: 0;
+    }
+
+    #Pensionado {
+        position: static; /* Cambiar a estático en móviles */
+    }
+
+    #Banner {
+        width: 100%; /* Ajustar al ancho completo en móviles */
+        margin-top: 10px; /* Espacio entre las imágenes */
+        z-index: 0;
+    }
+}
+
+#politica_privacidad_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    color: #000203;
+    margin-top: 2%;
+    z-index: 100;
+}

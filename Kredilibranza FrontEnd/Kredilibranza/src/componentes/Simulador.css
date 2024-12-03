@@ -1,0 +1,115 @@
+/*-------------------------   sección simulador   --------------------------------- */
+#simulador {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+    background-color: rgb(246, 244, 243);
+}
+
+.container_simulador {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    background-color: rgb(246, 244, 243);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.simulador_form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.form_group {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #ed5621;
+}
+
+input, select {
+    padding: 0.5rem;
+    border: 1px solid #ed5621;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn_simular {
+    padding: 0.5rem 1rem;
+    background-color: #ed5621;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.resultado {
+    background-color: rgb(246, 244, 243);
+    padding: 1rem;
+    border: 1px solid #ed5621;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.resultado h2 {
+    color: #ed5621;
+    font-size: 1.5rem;
+}
+
+.resultado p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.container_img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 35%;
+    justify-content: space-between;
+}
+
+.img_pensionados {
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    width: 50%;
+    height: auto;
+}
+
+.beneficios {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.beneficio_item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.icon_beneficio {
+    width: 50px;
+    height: 50px;
+    margin-right: 0.5rem;
+}
+
+.beneficio_item p {
+    font-size: 1rem;
+    margin: 0;
+}

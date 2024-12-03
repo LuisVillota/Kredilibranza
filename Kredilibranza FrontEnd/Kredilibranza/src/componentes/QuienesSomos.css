@@ -1,0 +1,53 @@
+/*------------------------- sección quienes somos --------------------------------- */
+#quienes-somos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    color: #000203;
+    margin-top: 2%;
+    z-index: 100;
+    
+}
+
+#quienes-somos h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#quienes-somos p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    margin: 0 5%;
+}
+
+#separador2 {
+    width: 100%;
+    border: none;
+    height: 1px;
+    background-color: #ed5621;
+    margin-top: 2%;
+    z-index: 1000;
+}
+
+.mision-vision {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.mision, .vision {
+    margin: 5%;
+    margin-top: 1%;
+    padding: 2rem;
+}
+
+.mision h3, .vision h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}

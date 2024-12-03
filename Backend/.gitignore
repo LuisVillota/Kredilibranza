@@ -1,0 +1,14 @@
+# Ignorar archivos de configuración del IDE
+.idea/
+
+# Ignorar archivo .env
+.env
+
+# Ignorar archivos de caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignorar carpetas externas (si son rutas relativas correctas)
+../Kredilibranza FrontEnd/
+../frontend/

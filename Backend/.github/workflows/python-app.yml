@@ -1,0 +1,65 @@
+
+name: Python CI
+
+on:
+  push:
+    branches:
+      - main1
+  pull_request:
+    branches:
+      - main1
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: ['3.11']
+
+    steps:
+    # 1. Checkout del código
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    # 2. Configurar Python
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    # 3. Cache de dependencias de Poetry
+    - name: Cache Poetry dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pypoetry
+        key: poetry-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+        restore-keys: |
+          poetry-${{ runner.os }}-
+
+    # 4. Instalar dependencias
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install poetry
+        poetry install
+
+    # 5. Ejecutar pre-commit para analizar el código
+    - name: Run pre-commit
+      run: |
+        poetry run pre-commit run --all-files
+
+    # 6. Ejecutar pruebas con pytest y generar reporte de cobertura
+    - name: Run tests
+      run: |
+        poetry run pytest --cov=app --cov-report=xml
+
+    # 7. Subir reporte de cobertura a Codecov
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v4
+      with:
+        flags: smart-tests
+        verbose: true
+      env:
+        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
